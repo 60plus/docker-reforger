@@ -72,6 +72,9 @@ else:
         ]
     if env_defined("SERVER_HOST_REGISTER_PORT"):
         config["gameHostRegisterPort"] = int(os.environ["SERVER_HOST_REGISTER_PORT"])
+        
+    if env_defined("GAME_GAME_NUMBER"):
+    config["game"]["gameNumber"] = int(os.environ["GAME_GAME_NUMBER"])    
 
     if env_defined("GAME_NAME"):
         config["game"]["name"] = os.environ["GAME_NAME"]
